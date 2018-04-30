@@ -52,37 +52,40 @@ def range_marks_view(request):
 	return render(request,'range_marks.html')
 
 def list_view(request):
-	xlsx = pd.ExcelFile("newmarks.xlsx")
-	sheet1 = xlsx.parse(0)
-	df = pd.DataFrame(sheet1)
-	df.set_index('USN',inplace=True)
-	c_total=df.Name.count()
-	sub_code = input("Enter subject code : ")
-	s1=sub_code.upper()
+	if request.method == 'POST' and request.FILES['myfile']:
+		myfile = request.FILES['myfile']
+		xlsx = pd.ExcelFile(myfile)
+		sheet1 = xlsx.parse(0)
+		df = pd.DataFrame(sheet1)
+		df.set_index('USN',inplace=True)
+		c_total=df.Name.count()
+		sub_code = input("Enter subject code : ")
+		s1=sub_code.upper()
 
-	df2=df[df[s1]<=5]
-	ls_5=df2.Name.count()
+		df2=df[df[s1]<=5]
+		ls_5=df2.Name.count()
 
-	df3=df[(df[s1]>5)&(df[s1]<=10)]
-	bt_5_10=df3.Name.count()
+		df3=df[(df[s1]>5)&(df[s1]<=10)]
+		bt_5_10=df3.Name.count()
 
-	df4=df[(df[s1]>10)&(df[s1]<=15)]
-	bt_10_15=df4.Name.count()
+		df4=df[(df[s1]>10)&(df[s1]<=15)]
+		bt_10_15=df4.Name.count()
 
-	df5=df[df[s1]>15]
-	gt_15=df5.Name.count()
+		df5=df[df[s1]>15]
+		gt_15=df5.Name.count()
 
-	x= ['Less than 5','Btw 5 and 10','Btw 10 and 15','More than 15']
-	y= [ls_5,bt_5_10,bt_10_15,gt_15]
-	x_pos=[i for i, _ in enumerate(x)]
+		x= ['Less than 5','Btw 5 and 10','Btw 10 and 15','More than 15']
+		y= [ls_5,bt_5_10,bt_10_15,gt_15]
+		x_pos=[i for i, _ in enumerate(x)]
 
-	pt.bar(x_pos,y,align='center')
-	pt.xticks(x_pos,x)
-	pt.xlabel('Range')
-	pt.ylabel('Count of students')
-	pt.title('Range wise marks')
-	pt.show()
-	return render(request,'list.html')
+		pt.bar(x_pos,y,align='center')
+		pt.xticks(x_pos,x)
+		pt.xlabel('Range')
+		pt.ylabel('Count of students')
+		pt.title('Range wise marks')
+		pt.show()
+		return render(request,'list.html')
+	return render(request, 'list.html')	
 
 def individual(request):
 	return render(request,'individual.html')
@@ -90,11 +93,12 @@ def individual(request):
 def upload_file(request):
 	if request.method == 'POST' and request.FILES['myfile']:
 		myfile = request.FILES['myfile']
-		fs = FileSystemStorage()
-		filename = fs.save(myfile.name, myfile)
-		print(filename)
-		uploaded_file_url = fs.url(filename)
-		print(uploaded_file_url)
+		# fs = FileSystemStorage()
+		# filename = fs.save(myfile.name, myfile)
+		# uploaded_file_url = fs.url(filename) 
+		# request.session['file'] = uploaded_file_url
+		# print('|------------------------------|file|------------------------------|')
+		# print(request.session['file'])
 		return render(request, 'internal.html',)
 	return render(request, 'internal.html')	
 
