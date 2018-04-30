@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+{% load staticfiles%}
+  <head>
+    <meta charset="utf-8">
+    <title>Indivisual Result</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link rel="stylesheet" href="{%static main_individual.css%}">
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/components/accordion.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
+  <a class="navbar-brand" href="/home/">MMS</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="/home/templates/external.html">External </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/home/templates/internal.html">Internal</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#abc">About Us</a>
+      </li>
+
+    </ul>
+  </div>
+</nav>
+
+
+
+
+<div class="container class0">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="/home/">Marks-Management-System</a></li>
+      <li class="breadcrumb-item"><a href="/home/templates/external.html">External</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Individual-result</li>
+    </ol>
+  </nav>
+</div>
+
+<div class="container class9">
+  <div class="ui info message">
+  <i class="close icon"></i>
+  <div class="header">
+    VTU CBCS Result
+  </div>
+  <ul class="list">
+    <li>Check your VTU - CBCS result</li>
+
+  </ul>
+</div>
+</div>
+
+
+<div class="container" id="res">
+  <div class="ui raised very padded text container segment classs">
+    <h2 class="ui header">Check your VTU external result</h2>
+
+    <div class="ui labeled input teal class1">
+      <div class="ui label">USN</div>
+      <input type="text" placeholder="1by16cs080">
+    </div>
+  <br>
+<div class="ui selection dropdown class4">
+    <input type="hidden" name="sem">
+    <i class="dropdown icon"></i>
+    <div class="default text">Semester</div>
+    <div class="menu">
+      <div class="item" data-value="1">1</div>
+      <div class="item" data-value="2">2</div>
+      <div class="item" data-value="3">3</div>
+      <div class="item" data-value="4">4</div>
+      <div class="item" data-value="5">5</div>
+      <div class="item" data-value="6">6</div>
+      <div class="item" data-value="7">7</div>
+      <div class="item" data-value="8">8</div>
+    </div>
+  </div>
+  <br>
+  <div class="ui divider class5">
+
+  </div>
+
+  <br>
+
+  <div class="ui purple animated button class6">
+    <div class="visible content">CHECK RESULT</div>
+    <div class="hidden content">
+      <i class="right arrow icon"></i>
+    </div>
+  </div>
+
+  </div>
+
+</div>
+
+<div class="container">
+  <div class="ui divider class10">
+
+  </div>
+</div>
+
+<div class="container">
+  <!-- <div class="ui purple large message">Kind of work we deals with VTU external result !</div> -->
+  <h2 class="ui header jns1">
+  <i class="file icon"></i>
+  <div class="content">
+    Result
+    <div class="sub header">VTU-CBCS Result</div>
+  </div>
+</h2>
+</div>
+
+<div class="container">
+
+    <div class="ui raised very padded text container segment classs">
+
+    <table class="ui celled table">
+    <thead>
+      <tr>
+        <th>Subject Name</th>
+      <th>Subject code</th>
+      <th>Internal Marks</th>
+      <th>External Marks</th>
+      <th>Total Marks</th>
+      <th>Result</th>
+
+    </tr></thead><tbody>
+      <tr>
+        <td>Analog and Digital electronics</td>
+        <td>15CS32</td>
+        <td>18</td>
+        <td>53</td>
+        <td>71</td>
+        <td>P</td>
+      </tr>
+      <tr>
+        <td>Data Structure</td>
+        <td>15CS33</td>
+        <td>19</td>
+        <td>42</td>
+        <td>61</td>
+        <td>P</td>
+      </tr>
+      <tr>
+        <td>Computer Organisation</td>
+        <td>15CS34</td>
+        <td>17</td>
+        <td>38</td>
+        <td>55</td>
+        <td>P</td>
+      </tr>
+      <tr>
+        <td>Unix and Shell programming</td>
+        <td>15CS35</td>
+        <td>20</td>
+        <td>43</td>
+        <td>63</td>
+        <td>P</td>
+      </tr>
+      <tr>
+        <td>Discrete Mathematics</td>
+        <td>15CS36</td>
+        <td>17</td>
+        <td>57</td>
+        <td>74</td>
+        <td>P</td>
+      </tr>
+      <tr>
+        <td>Analog and Digital electronics LAB</td>
+        <td>15CSL37</td>
+        <td>20</td>
+        <td>77</td>
+        <td>97</td>
+        <td>P</td>
+      </tr>
+      <tr>
+        <td>Data Structure LAB</td>
+        <td>15CSL38</td>
+        <td>18</td>
+        <td>76</td>
+        <td>94</td>
+        <td>P</td>
+      </tr>
+      <tr>
+        <td>Engineering Maths - IV</td>
+        <td>15MAT31</td>
+        <td>18</td>
+        <td>63</td>
+        <td>81</td>
+        <td>P</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+</div>
+
+
+<div class="container">
+  <div class="ui divider class10">
+
+  </div>
+
+</div>
+
+
+
+
+
+<footer><p id="foot">Copyright &copy; Marks Management System</p></footer>
+
+  </body>
+</html>

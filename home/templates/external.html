@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+{% load staticfiles%}
+  <head>
+    <meta charset="utf-8">
+    <title>External</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link rel="stylesheet" href="{%static 'css/main_extr.css'%}">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/components/accordion.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+</head>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
+  <a class="navbar-brand" href="/home/">MMS</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">External <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/home/templates/internal.html">Internal</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#abc">About Us</a>
+      </li>
+
+    </ul>
+  </div>
+</nav>
+
+
+
+
+<div class="container class0">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="/home/">Marks-Management-System</a></li>
+      <li class="breadcrumb-item active" aria-current="page">External</li>
+    </ol>
+  </nav>
+</div>
+
+<div class="container class9">
+  <div class="ui info message">
+  <i class="close icon"></i>
+  <div class="header">
+    VTU External Results
+  </div>
+  <ul class="list">
+    <li>Check multiple results at once</li>
+    <li>Get the results in Excel sheet</li>
+  </ul>
+</div>
+</div>
+
+
+<div class="container" id="res">
+  <div class="ui raised very padded text container segment classs">
+    <h2 class="ui header">Get VTU results within a range of USN</h2>
+
+    <div class="ui labeled input teal class1">
+      <div class="ui label">
+        USN Prefix
+      </div>
+      <input type="text" placeholder="1by16cs">
+    </div>
+  <br>
+  <div class="ui labeled input teal class2">
+    <div class="ui label">
+      From USN
+    </div>
+    <input type="text" placeholder="001">
+  </div>
+  <br>
+  <div class="ui labeled input teal class3">
+    <div class="ui label">
+      To USN
+    </div>
+    <input type="text" placeholder="113">
+  </div>
+
+  <br>
+
+  <div class="ui selection dropdown class4">
+    <input type="hidden" name="sem">
+    <i class="dropdown icon"></i>
+    <div class="default text">Semester</div>
+    <div class="menu">
+      <div class="item" data-value="1">1</div>
+      <div class="item" data-value="2">2</div>
+      <div class="item" data-value="3">3</div>
+      <div class="item" data-value="4">4</div>
+      <div class="item" data-value="5">5</div>
+      <div class="item" data-value="6">6</div>
+      <div class="item" data-value="7">7</div>
+      <div class="item" data-value="8">8</div>
+    </div>
+  </div>
+  <br>
+  <div class="ui divider class5">
+
+  </div>
+
+  <br>
+
+  <div class="ui purple animated button class6">
+    <div class="visible content">GET RESULTS</div>
+    <div class="hidden content">
+      <i class="right arrow icon"></i>
+    </div>
+  </div>
+
+  </div>
+
+</div>
+<div class="container">
+  <div class="ui divider class10">
+
+  </div>
+</div>
+
+<div class="container">
+  <!-- <div class="ui purple large message">Kind of work we deals with VTU external result !</div> -->
+  <h2 class="ui header jns1">
+  <i class="file icon"></i>
+  <div class="content">
+    Stuff we do
+    <div class="sub header">Choose your preferences</div>
+  </div>
+</h2>
+</div>
+
+
+<div class="container class8" id="abc">
+  <div class="ui three column grid">
+  <div class="column">
+    <div class="ui fluid card">
+      <div class="image">
+        <img src="{%static 'images/medical-result.png'%}">
+      </div>
+      <div class="content">
+        <a class="header" href="/home/templates/individual.html">Indivisual Result</a>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="ui fluid card">
+      <div class="image">
+        <img src="{%static 'images/analysis.png'%}">
+      </div>
+      <div class="content">
+        <a class="header">Data Analysis</a>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="ui fluid card">
+      <div class="image">
+        <img src="{%static 'images/analytics.png'%}">
+      </div>
+      <div class="content">
+        <a class="header">Plot Graph</a>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+<footer><p id="foot">Copyright &copy; Marks Management System</p></footer>
+
+  </body>
+</html>
